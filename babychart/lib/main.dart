@@ -1,3 +1,6 @@
+import 'package:babychart/responsiveNavBarPage.dart';
+import 'package:babychart/selectingPage.dart';
+import 'package:babychart/welcome_page.dart';
 import 'package:flutter/material.dart';
 import 'package:babychart/charts.dart';
 import 'package:babychart/immunizationH.dart';
@@ -22,14 +25,17 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       routes: {
-        '/': (context) => ResponsiveNavBarPage(),
+        '/': (context) => WelcomePage(),
+        '/nav': (context) => ResponsiveNavBarPage(),
         '/immunization': (context) => immunizationH(),
         '/charts': (context) => charts(),
+        '/selectingPage': (context) => SelectingPage(),
       },
     );
   }
 }
 
+/*
 class ResponsiveNavBarPage extends StatelessWidget {
   ResponsiveNavBarPage({Key? key}) : super(key: key);
 
@@ -155,7 +161,7 @@ class _ProfileIcon extends StatelessWidget {
               ),
             ]);
   }
-}
+}*/
 
 /*class CustomTabBarsPage extends StatefulWidget {
   const CustomTabBarsPage({super.key});
