@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'chart.dart';
 import 'charts.dart';
 import 'immunizationH.dart';
 
@@ -72,7 +73,7 @@ class _CustomTabBarsPageState extends State<CustomTabBarsPage>
             controller: _tabController,
             children: [
               immunizationH(),
-              charts(),
+              Charts(),
             ],
           ),
         ),

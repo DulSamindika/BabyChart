@@ -1,10 +1,17 @@
+import 'package:babychart/kidsSelecting.dart';
 import 'package:babychart/responsiveNavBarPage.dart';
+import 'package:babychart/selectChild.dart';
 import 'package:babychart/selectingPage.dart';
+import 'package:babychart/signInPage.dart';
+import 'package:babychart/signUpPage.dart';
 import 'package:babychart/welcome_page.dart';
 import 'package:flutter/material.dart';
 import 'package:babychart/charts.dart';
 import 'package:babychart/immunizationH.dart';
 import 'CustomTabBarsPage.dart';
+import 'chart.dart';
+import 'midSignIn.dart';
+import 'midSignUp.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: const Color(0xFFCC31A1),
         brightness: Brightness.light,
@@ -28,8 +36,15 @@ class MyApp extends StatelessWidget {
         '/': (context) => WelcomePage(),
         '/nav': (context) => ResponsiveNavBarPage(),
         '/immunization': (context) => immunizationH(),
-        '/charts': (context) => charts(),
+        '/charts': (context) => Charts(),
         '/selectingPage': (context) => SelectingPage(),
+        '/signIn': (context) => SignInPage(),
+        '/signUp': (context) => SignUpPage(),
+        '/selectChild': (context) => SelectChild(),
+        '/midSignIn': (context) => MidSignInPage(),
+        '/midSignUp': (context) => MidSignUpPage(),
+        '/kidsSelecting': (context) => KidsSelecting(),
+        '/chart': (context) => Chart(),
       },
     );
   }

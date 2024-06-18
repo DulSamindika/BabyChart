@@ -21,6 +21,7 @@ class SelectingPage extends StatelessWidget {
                 decoration: AppDecoration.gradientPurpleToPurple,
                 child: Column(
                   children: [
+                    SizedBox(height: 5),
                     _buildwomenTrendySection(context),
                     SizedBox(height: 17),
                     _buildMidwifeAccountSection(context),
@@ -29,11 +30,12 @@ class SelectingPage extends StatelessWidget {
                       text: "Sign UP",
                       margin: EdgeInsets.symmetric(horizontal: 46),
                       buttonStyle: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all<Color>(Color(0xFFDF32B9)), // Change this to your desired color
+                        backgroundColor: MaterialStateProperty.all<Color>(Color(
+                            0xFFDF32B9)), // Change this to your desired color
                       ),
-                      // onPressed: () {
-                      //   onTapSignup(context);
-                      // },
+                      onPressed: () {
+                        onTapSignup(context);
+                      },
                     ),
                     SizedBox(height: 14)
                   ],
@@ -80,37 +82,31 @@ class SelectingPage extends StatelessWidget {
         children: [
           Align(
             alignment: Alignment.topCenter,
-            child: Container(
-              margin: EdgeInsets.only(right: 13),
-              padding: EdgeInsets.symmetric(horizontal: 76, vertical: 23),
-              decoration: AppDecoration.outlinePrimaryContainer2.copyWith(
-                borderRadius: BorderRadiusStyle.roundedBorder21,
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image(image: AssetImage('assets/parent.png')),
-                  // CustomImageView(
-                  //   imagePath: ImageConstant.imgWomenTrendyIc,
-                  //   height: 89.v,
-                  //   width: 117.h,
-                  // ),
-                  SizedBox(height: 10),
-                  Text(
-                    "Parent Account",
-                    style: theme.textTheme.titleLarge,
-                  ),
-                ],
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/signIn');
+              },
+              child: Container(
+                margin: EdgeInsets.only(right: 13),
+                padding: EdgeInsets.symmetric(horizontal: 76, vertical: 23),
+                decoration: AppDecoration.outlinePrimaryContainer2.copyWith(
+                  borderRadius: BorderRadiusStyle.roundedBorder21,
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image(image: AssetImage('assets/parent.png')),
+                    SizedBox(height: 10),
+                    Text(
+                      "Parent Account",
+                      style: theme.textTheme.titleLarge,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
-          // CustomIconButton(
-          //   width: 37.0,
-          //   height: 39.0,
-          //   // child: CustomAlign.bottomRight,
-          //   child:Image(image: AssetImage('assets/baby_Img.png')),
-          // ),
         ],
       ),
     );
@@ -126,45 +122,39 @@ class SelectingPage extends StatelessWidget {
         children: [
           Align(
             alignment: Alignment.topCenter,
-            child: Container(
-              margin: EdgeInsets.only(right: 13),
-              padding: EdgeInsets.symmetric(horizontal: 76, vertical: 23),
-              decoration: AppDecoration.outlinePrimaryContainer2.copyWith(
-                borderRadius: BorderRadiusStyle.roundedBorder21,
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image(image: AssetImage('assets/midwife.png')),
-                  // CustomImageView(
-                  //   imagePath: ImageConstant.imgWomenTrendyIc,
-                  //   height: 89.v,
-                  //   width: 117.h,
-                  // ),
-                  SizedBox(height: 10),
-                  Text(
-                    "Midwife Account",
-                    style: theme.textTheme.titleLarge,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ],
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/midSignIn');
+              },
+              child: Container(
+                margin: EdgeInsets.only(right: 13),
+                padding: EdgeInsets.symmetric(horizontal: 76, vertical: 23),
+                decoration: AppDecoration.outlinePrimaryContainer2.copyWith(
+                  borderRadius: BorderRadiusStyle.roundedBorder21,
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image(image: AssetImage('assets/midwife.png')),
+                    SizedBox(height: 10),
+                    Text(
+                      "Midwife Account",
+                      style: theme.textTheme.titleLarge,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
-          // CustomIconButton(
-          //   width: 37.0,
-          //   height: 39.0,
-          //   // child: CustomAlign.bottomRight,
-          //   child:Image(image: AssetImage('assets/baby_Img.png')),
-          // ),
         ],
       ),
     );
   }
 
-  // onTapSignup(BuildContext context) {
-  //   Navigator.pushNamed(context, AppRoutes.iphone1313Pro80Screen);
-  // }
+  onTapSignup(BuildContext context) {
+    Navigator.pushNamed(context, '/midSignup');
+  }
 }
