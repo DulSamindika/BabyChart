@@ -73,7 +73,7 @@ class _CustomTabBarsPageState extends State<CustomTabBarsPage>
             controller: _tabController,
             children: [
               immunizationH(),
-              Charts(),
+              Chart(),
             ],
           ),
         ),

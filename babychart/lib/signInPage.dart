@@ -1,3 +1,4 @@
+import 'package:babychart/auth/auth_service.dart';
 import 'package:babychart/theme/app_decorations.dart';
 import 'package:babychart/theme/custom_text_style.dart';
 import 'package:babychart/theme/theme_helper.dart';
@@ -17,6 +18,7 @@ class SignInPage extends StatelessWidget {
   TextEditingController passwordController = TextEditingController();
   bool rememberMeCheckbox = false;
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final AuthService _authService = AuthService();
 
   @override
   Widget build(BuildContext context) {
@@ -336,7 +338,20 @@ class SignInPage extends StatelessWidget {
   }
 
   /// Navigates to the androidLarge19Screen when the action is triggered.
-  onTapLogin(BuildContext context) {
-    Navigator.pushNamed(context, '/signUp');
+  void onTapLogin(BuildContext context) async {
+    if (_formKey.currentState!.validate()) {
+      try {
+        final response = await _authService.login(
+          userNameController.text,
+          passwordController.text,
+        );
+
+        Navigator.pushNamed(context, '/signUp');
+        print('Login Successful: ${response['message']}');
+      } catch (e) {
+        // Handle error (e.g., show error message)
+        print('Login Failed: $e');
+      }
+    }
   }
 }

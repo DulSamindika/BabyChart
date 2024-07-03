@@ -7,11 +7,12 @@ import 'package:flutter/material.dart';
 class SelectingPage extends StatelessWidget {
   const SelectingPage({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: SizedBox(
+@override
+Widget build(BuildContext context) {
+  return SafeArea(
+    child: Scaffold(
+      body: SingleChildScrollView(
+        child: SizedBox(
           width: double.maxFinite,
           child: Column(
             children: [
@@ -30,8 +31,9 @@ class SelectingPage extends StatelessWidget {
                       text: "Sign UP",
                       margin: EdgeInsets.symmetric(horizontal: 46),
                       buttonStyle: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all<Color>(Color(
-                            0xFFDF32B9)), // Change this to your desired color
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                          Color(0xFFDF32B9),
+                        ),
                       ),
                       onPressed: () {
                         onTapSignup(context);
@@ -45,8 +47,10 @@ class SelectingPage extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
+    ),
+  );
+}
+
 
   // Section MidContent
   Widget _buildAccountTypeSelection(BuildContext context) {

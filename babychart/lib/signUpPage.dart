@@ -1,3 +1,4 @@
+import 'package:babychart/auth/auth_service.dart';
 import 'package:babychart/theme/app_decorations.dart';
 import 'package:babychart/theme/custom_text_style.dart';
 import 'package:babychart/theme/theme_helper.dart';
@@ -15,10 +16,11 @@ class SignUpPage extends StatelessWidget {
   );
   TextEditingController userNameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-  TextEditingController EmailController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
 
   bool rememberMeCheckbox = false;
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  AuthService authService = AuthService();
 
   @override
   Widget build(BuildContext context) {
@@ -62,22 +64,11 @@ class SignUpPage extends StatelessWidget {
                               child: Stack(
                                 alignment: Alignment.center,
                                 children: [
-                                  /*Align(
-                                    alignment: Alignment.bottomCenter,
-                                    child: Padding(
-                                      padding: EdgeInsets.only(bottom: 15),
-                                      child: Text(
-                                        "Sign In",
-                                        style: CustomTextStyles
-                                            .titleLargePoppinsWhiteA70001,
-                                      ),
-                                    ),
-                                  ),*/
                                   CustomElevatedButton(
                                     width: 236,
                                     text: "Sign Up",
                                     onPressed: () {
-                                      onTapLogin(context);
+                                      onTapSignUp(context);
                                     },
                                     alignment: Alignment.center,
                                     buttonStyle: ButtonStyle(
@@ -281,7 +272,7 @@ class SignUpPage extends StatelessWidget {
               bottomRight: Radius.circular(15),
             ),
             child: CustomTextFormField(
-              controller: EmailController,
+              controller: emailController,
               hintText: "Email",
             ),
           )
@@ -362,7 +353,22 @@ class SignUpPage extends StatelessWidget {
   }
 
   /// Navigates to the androidLarge19Screen when the action is triggered.
-  onTapLogin(BuildContext context) {
-    Navigator.pushNamed(context, '/selectChild');
+   void onTapSignUp(BuildContext context) async {
+    if (_formKey.currentState!.validate()) {
+      try {
+        final response = await authService.register(
+          userNameController.text,
+          emailController.text,
+          passwordController.text,
+          passwordController.text,
+        );
+
+        Navigator.pushNamed(context, '/selectChild');
+        print('Registration Successful: ${response['message']}');
+      } catch (e) {
+        // Handle registration error (e.g., show error message)
+        print('Registration Failed: $e');
+      }
+    }
   }
 }

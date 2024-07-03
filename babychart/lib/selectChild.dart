@@ -13,28 +13,30 @@ class SelectChild extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: SizedBox(
-          width: double.maxFinite,
-          child: Column(
-            children: [
-              _buildChildSelection(context),
-              Container(
-                width: double.infinity,
-                padding: EdgeInsets.symmetric(
-                  horizontal: 29,
-                  vertical: 50,
-                ),
-                decoration: AppDecoration.gradientPurpleToPurple,
-                child: Column(
-                  children: [
-                    SizedBox(height: 10),
-                    _buildProfileSection(context),
-                    SizedBox(height: 50),
-                    _buildAddChildSection(context)
-                  ],
-                ),
-              )
-            ],
+        body: SingleChildScrollView(
+          child: SizedBox(
+            width: double.maxFinite,
+            child: Column(
+              children: [
+                _buildChildSelection(context),
+                Container(
+                  width: double.infinity,
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 29,
+                    vertical: 50,
+                  ),
+                  decoration: AppDecoration.gradientPurpleToPurple,
+                  child: Column(
+                    children: [
+                      SizedBox(height: 10),
+                      _buildProfileSection(context),
+                      SizedBox(height: 50),
+                      _buildAddChildSection(context)
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),

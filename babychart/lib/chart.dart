@@ -1,482 +1,483 @@
-class AndroidLarge5Page extends StatefulWidget {
+// import 'package:flutter/material.dart';
 
-  const AndroidLarge5Page({Key? key})
+// class AndroidLarge5Page extends StatefulWidget {
 
-  key: key, );
+//   const AndroidLarge5Page({Key? key})
 
-  @override AndroidLarge5PageState createState() -> AndroidLarge5PageState(); }
 
-class AndroidLarge5PageState extends State<AndroidLarge5Page> with AutomaticKeepAliveClientMixin<AndroidLarge5Page> {
+//   @override _AndroidLarge5PageState createState() -> AndroidLarge5PageState(); }
 
-  @override
+// class AndroidLarge5PageState extends State<AndroidLarge5Page> with AutomaticKeepAliveClientMixin<AndroidLarge5Page> {
 
-  bool get wantKeepAlive => true;
+//   @override
 
-  @override
+//   bool get wantKeepAlive => true;
 
-  Widget build(BuildContext context) {
+//   @override
 
-    return SafeArea(
+//   Widget build(BuildContext context) {
 
-      child: Scaffold(
+//     return SafeArea(
 
-      body: Container(
+//       child: Scaffold(
 
-      width: double.maxFinite,
+//       body: Container(
 
-      decoration: AppDecoration.fillRed,
+//       width: double.maxFinite,
 
-      child: Column(
+//       decoration: AppDecoration.fillRed,
 
-          children: [
+//       child: Column(
 
-          SizedBox(height: 21.v),
+//           children: [
 
-      Padding(
+//           SizedBox(height: 21.v),
 
-      padding: EdgeInsets.only(
+//       Padding(
 
-      left: 33.h,
+//       padding: EdgeInsets.only(
 
-      right: 36.h,
+//       left: 33.h,
 
-    ), child: Column(
+//       right: 36.h,
 
-    crossAxisAlignment: CrossAxisAlignment.end,
+//     ), child: Column(
 
-    children: [
+//     crossAxisAlignment: CrossAxisAlignment.end,
 
-    Container( padding: EdgeInsets.symmetric(
+//     children: [
 
-    horizontal: 6.h,
+//     Container( padding: EdgeInsets.symmetric(
 
-    vertical: 2.v,
+//     horizontal: 6.h,
 
-    ),
+//     vertical: 2.v,
 
-    decoration: AppDecoration.fillwhiteA,
+//     ),
 
-    child: Row(
+//     decoration: AppDecoration.fillwhiteA,
 
-    mainAxisAlignment: MainAxisAlignment.center,
+//     child: Row(
 
-    children: [
+//     mainAxisAlignment: MainAxisAlignment.center,
 
-    Column(
+//     children: [
 
-    crossAxisAlignment: CrossAxisAlignment.end,
+//     Column(
 
-    children: [
+//     crossAxisAlignment: CrossAxisAlignment.end,
 
-    Text(
+//     children: [
 
-    "12",
+//     Text(
 
-    style: theme.textTheme.bodySmall, ),
+//     "12",
 
-    Spacer(
+//     style: theme.textTheme.bodySmall, ),
 
-    flex: 24, ),
+//     Spacer(
 
-    Text( "9",
+//     flex: 24, ),
 
-    style: these.textTheme.bodySmall, ).
+//     Text( "9",
 
-    Spacer(
+//     style: these.textTheme.bodySmall, ).
 
-    flex: 25,
+//     Spacer(
 
-    ),
+//     flex: 25,
 
-    Text( "6",
+//     ),
 
-    style: theme.textTheme.bodySmall, ),
+//     Text( "6",
 
-    Spacer
+//     style: theme.textTheme.bodySmall, ),
 
-    flex: 24, ),
+//     Spacer
 
-    Text
+//     flex: 24, ),
 
-    style: theme.textTheme.bodySmall,
+//     Text
 
-    Spacer(
+//     style: theme.textTheme.bodySmall,
 
-    flex: 24,
+//     Spacer(
 
-    ),
+//     flex: 24,
 
-    Text(
+//     ),
 
-    "8",
+//     Text(
 
-    style: theme.textTheme.bodySmall,
+//     "8",
 
-    )
+//     style: theme.textTheme.bodySmall,
 
-    ],
+//     )
 
-    ),
+//     ],
 
-    Container(
+//     ),
 
-    height: 518.v,
+//     Container(
 
-    width: 256.h,
+//     height: 518.v,
 
-    margin: EdgeInsets.only(
+//     width: 256.h,
 
-    left: 7.h,
+//     margin: EdgeInsets.only(
 
-    top: 8.v,
+//     left: 7.h,
 
-    bottom: 6.v,
+//     top: 8.v,
 
-    ),
+//     bottom: 6.v,
 
-    child: Stack(
+//     ),
 
-    alignment: Alignment.bottomCenter,
+//     child: Stack(
 
-    children: [
+//     alignment: Alignment.bottomCenter,
 
-    Align(
+//     children: [
 
-    alignment: Alignment.topCenter,
+//     Align(
 
-    child: Container(
+//     alignment: Alignment.topCenter,
 
-    height: 321.v,
+//     child: Container(
 
-    width: 250.h,
+//     height: 321.v,
 
-    margin: EdgeInsets.only(top: 62.v),
+//     width: 250.h,
 
-    padding:
+//     margin: EdgeInsets.only(top: 62.v),
 
-    EdgeInsets.symmetric(vertical: 6.v),
+//     padding:
 
-    decoration: BoxDecoration(
+//     EdgeInsets.symmetric(vertical: 6.v),
 
-    image: DecorationImage(
+//     decoration: BoxDecoration(
 
-    image: fs.Svg(
+//     image: DecorationImage(
 
-    ImageConstant.imgGroup364, ),
+//     image: fs.Svg(
 
-    fit: BoxFit.cover,
+//     ImageConstant.imgGroup364, ),
 
-    ),
+//     fit: BoxFit.cover,
 
-    ),
+//     ),
 
-    child: Stack(
+//     ),
 
-    alignment: Alignment.bottomCenter,
+//     child: Stack(
 
-    children: [
+//     alignment: Alignment.bottomCenter,
 
-    CustomImageView(
+//     children: [
 
-    imagePath: ImageConstant.imgVector2,
+//     CustomImageView(
 
-    height: 280.v,
+//     imagePath: ImageConstant.imgVector2,
 
-    width: 246.h,
+//     height: 280.v,
 
-    alignment: Alignment.bottomCenter, ),
+//     width: 246.h,
 
-    CustomImageView(
+//     alignment: Alignment.bottomCenter, ),
 
-    imagePath: ImageConstant.imgVector3,
+//     CustomImageView(
 
-    height: 239.v,
+//     imagePath: ImageConstant.imgVector3,
 
-    width: 247.h,
+//     height: 239.v,
 
-    alignment: Alignment.bottomCenter,
+//     width: 247.h,
 
-    margin: EdgeInsets.only(bottom: 5.v),
+//     alignment: Alignment.bottomCenter,
 
-    Align(
+//     margin: EdgeInsets.only(bottom: 5.v),
 
-    alignment: Alignment.bottomCenter,
+//     Align(
 
-    child: Container(
+//     alignment: Alignment.bottomCenter,
 
-    height: 1.v,
+//     child: Container(
 
-    width: 251.h,
+//     height: 1.v,
 
-    decoration: BoxDecoration(
+//     width: 251.h,
 
-    color: appTheme.gray600,
+//     decoration: BoxDecoration(
 
-    ),
+//     color: appTheme.gray600,
 
-    ),
+//     ),
 
-    Align(
+//     ),
 
-    alignment: Alignment.bottomCenter,
+//     Align(
 
+//     alignment: Alignment.bottomCenter,
 
-    child: Container(
 
-    height: 1.v,
+//     child: Container(
 
-    width: 251.h,
+//     height: 1.v,
 
-    margin: EdgeInsets.only(bottom: 128.v),
+//     width: 251.h,
 
-    decoration: BoxDecoration(
+//     margin: EdgeInsets.only(bottom: 128.v),
 
-    color: appTheme.gray600,
+//     decoration: BoxDecoration(
 
-    ),
+//     color: appTheme.gray600,
 
-    ),
+//     ),
 
-    ),
+//     ),
 
-    Align(
+//     ),
 
-    alignment: Alignment.center,
+//     Align(
 
-    child: Container(
+//     alignment: Alignment.center,
 
-    height: 1.v,
+//     child: Container(
 
-    width: 251.h,
+//     height: 1.v,
 
-    decoration: BoxDecoration(
+//     width: 251.h,
 
-    color: appTheme.gray600,
+//     decoration: BoxDecoration(
 
-    ),
+//     color: appTheme.gray600,
 
-    ),
+//     ),
 
-    ),
+//     ),
 
-    Align(
+//     ),
 
-    alignment: Alignment.topCenter,
+//     Align(
 
-    child: Container(
+//     alignment: Alignment.topCenter,
 
-    height: 1.v,
+//     child: Container(
 
-    width: 251.h,
+//     height: 1.v,
 
-    margin: EdgeInsets.only(top: 129.v),
+//     width: 251.h,
 
-    decoration: BoxDecoration(
+//     margin: EdgeInsets.only(top: 129.v),
 
-    color: appTheme.gray600,
+//     decoration: BoxDecoration(
 
-    ),
+//     color: appTheme.gray600,
 
-    ), Align(
+//     ),
 
-    alignment: Alignment.topCenter,
+//     ), Align(
 
-    child: Container(
+//     alignment: Alignment.topCenter,
 
-    height: 1.٧,
+//     child: Container(
 
-    width: 251.h,
+//     height: 1.٧,
 
-    decoration: BoxDecoration(
+//     width: 251.h,
 
-    color: appTheme.gray600,
+//     decoration: BoxDecoration(
 
-    ),
+//     color: appTheme.gray600,
 
-    ),
+//     ),
 
-    ),
+//     ),
 
-    Align(
+//     ),
 
-    alignment: Alignment.centerLeft,
+//     Align(
 
-    child: Container(
+//     alignment: Alignment.centerLeft,
 
-    height: 518.v,
+//     child: Container(
 
-    width: 1.h,
+//     height: 518.v,
 
-    margin: EdgeInsets.only(left: 3.h),
+//     width: 1.h,
 
-    decoration: BoxDecoration(
+//     margin: EdgeInsets.only(left: 3.h),
 
-    color: appTheme.gray600,
+//     decoration: BoxDecoration(
 
-    ),
+//     color: appTheme.gray600,
 
-    ),
+//     ),
 
-    ),
+//     ),
 
-    Align(
+//     ),
 
-    alignment: Alignment.centerLeft,
+//     Align(
 
-    child: Container(
+//     alignment: Alignment.centerLeft,
 
-    height: 518.v,
+//     child: Container(
 
-    width: 1.h,
+//     height: 518.v,
 
-    margin: EdgeInsets.only(left: 25.h),
+//     width: 1.h,
 
-    decoration: BoxDecoration(
+//     margin: EdgeInsets.only(left: 25.h),
 
-    color: appTheme.gray600,
+//     decoration: BoxDecoration(
 
-    ),
+//     color: appTheme.gray600,
 
-    ),
+//     ),
 
-    ),
+//     ),
 
-    Align(
+//     ),
 
-    alignment: Alignment.centerLeft,
+//     Align(
 
-    child: Container(
+//     alignment: Alignment.centerLeft,
 
-    height: 518.v,
+//     child: Container(
 
-    width: 1.h,
+//     height: 518.v,
 
-    margin: EdgeInsets.only(left: 48.h).
+//     width: 1.h,
 
+//     margin: EdgeInsets.only(left: 48.h).
 
-    decoration: BoxDecoration(
 
-    color: appTheme.gray600,
+//     decoration: BoxDecoration(
 
-    ),
+//     color: appTheme.gray600,
 
-    ),
+//     ),
 
-    ),
+//     ),
 
-    Align(
+//     ),
 
-    alignment: Alignment.centerLeft,
+//     Align(
 
-    child: Container(
+//     alignment: Alignment.centerLeft,
 
-    height: 518.v,
+//     child: Container(
 
-    width: 1.h,
+//     height: 518.v,
 
-    margin: EdgeInsets.only(left: 71.h),
+//     width: 1.h,
 
-    decoration: BoxDecoration(
+//     margin: EdgeInsets.only(left: 71.h),
 
-    color: appTheme.gray600, ),
+//     decoration: BoxDecoration(
 
-    ),
+//     color: appTheme.gray600, ),
 
-    ),
+//     ),
 
-    Align(
+//     ),
 
-    alignment: Alignment.centerLeft,
+//     Align(
 
-    child: Container(
+//     alignment: Alignment.centerLeft,
 
-    height: 518.v,
+//     child: Container(
 
-    width: 1.h,
+//     height: 518.v,
 
-    margin: EdgeInsets.only(left: 93.h),
+//     width: 1.h,
 
-    decoration: BoxDecoration(
+//     margin: EdgeInsets.only(left: 93.h),
 
-    color: appTheme.gray600,
+//     decoration: BoxDecoration(
 
-    ),
+//     color: appTheme.gray600,
 
-    ),
+//     ),
 
-    ),
+//     ),
 
-    Align(
+//     ),
 
-    alignment: Alignment.centerLeft,
+//     Align(
 
-    child: Container(
+//     alignment: Alignment.centerLeft,
 
-    height: 518.v,
+//     child: Container(
 
-    width: 1.h,
+//     height: 518.v,
 
-    margin: EdgeInsets.only(left: 116.h),
+//     width: 1.h,
 
-    decoration: BoxDecoration(
+//     margin: EdgeInsets.only(left: 116.h),
 
-    color: appTheme.gray600,
+//     decoration: BoxDecoration(
 
-    Align(
+//     color: appTheme.gray600,
 
-    alignment: Alignment.centerRight,
+//     Align(
 
-    child: Container(
+//     alignment: Alignment.centerRight,
 
-    height: 518.v,
+//     child: Container(
 
-    width: 1.h,
+//     height: 518.v,
 
-    margin: EdgeInsets.only(right: 115.h),
+//     width: 1.h,
 
-    decoration: BoxDecoration(
+//     margin: EdgeInsets.only(right: 115.h),
 
-    color: appTheme.gray600,
+//     decoration: BoxDecoration(
 
-    ),
+//     color: appTheme.gray600,
 
-    ),
+//     ),
 
-    ),
+//     ),
 
-    Align(
+//     ),
 
-    alignment: Alignment.centerRight,
+//     Align(
 
-    child: Container(
+//     alignment: Alignment.centerRight,
 
-    height: 518.v,
+//     child: Container(
 
-    width: 1.h,
+//     height: 518.v,
 
-    margin: EdgeInsets.only(right: 92.h),
+//     width: 1.h,
 
-    decoration: BoxDecoration(
+//     margin: EdgeInsets.only(right: 92.h),
 
-    color: appTheme.gray600,
+//     decoration: BoxDecoration(
 
-    ),
+//     color: appTheme.gray600,
 
-    ),
+//     ),
 
-    ),
+//     ),
 
-    Align(
+//     ),
 
-    alignment: Alignment.centerRight,
+//     Align(
 
-    child: Container( height: 518.v,
+//     alignment: Alignment.centerRight,
 
-    width: 1.h,
+//     child: Container( height: 518.v,
 
-    margin: EdgeInsets.only(right: 70.h),
+//     width: 1.h,
 
-    decoration: BoxDecoration( color: appTheme.gray600,
+//     margin: EdgeInsets.only(right: 70.h),
+
+//     decoration: BoxDecoration( color: appTheme.gray600,
 
     
     
